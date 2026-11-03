@@ -21,6 +21,10 @@ export const site = {
   url: 'https://nambu-sky.pages.dev', // 도메인 구매 시 이 값과 astro.config.mjs의 site를 함께 변경
   phone: '010-5322-3678',
   hours: '24시 항시 대기',
+  schedule: [ // 작업 단위별 기본 시간
+    {label: '반나절', times: ['오전 8시 ~ 12시 (4시간)', '오후 1시 ~ 5시 (4시간)']},
+    {label: '하루', times: ['오전 8시 ~ 오후 5시 (8시간)']},
+  ],
   owner: '전찬성',
   bizNo: '121-52-60319',
   vehicle: '1톤에서 5톤 (54M ~ 75M) 등, 다량 보유',
