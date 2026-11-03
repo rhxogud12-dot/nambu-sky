@@ -12,9 +12,12 @@
 - `src/pages/`: 소개/안내/문의 문구 수정
 - `src/data/site.js`의 `projects`: 실제 작업 사례 등록 (가상의 실적을 공개하지 마세요)
 
-## Cloudflare Pages
-GitHub에 올린 후 Cloudflare Pages의 Git 저장소 연결을 선택하세요.
-Build command: `npm run build` / Output directory: `dist` / Production branch: `main`.
+## 배포 (Cloudflare Workers)
+- 주소: https://nambu-sky.rhxogud12.workers.dev
+- `main` 브랜치에 push하면 자동 배포됩니다.
+- Build command: `npm run build` / Deploy command: `npx wrangler deploy`
+- `wrangler.jsonc`가 `dist` 폴더만 정적 파일로 올립니다. 서버 코드는 없습니다.
+- 도메인 변경 시 `astro.config.mjs`의 `site`와 `src/data/site.js`의 `url`을 함께 수정하세요.
 
 ## 공개 전 점검
 - 전화번호 입력 후 실제 휴대전화에서 전화/문자 링크 테스트
