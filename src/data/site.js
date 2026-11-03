@@ -14,6 +14,7 @@ import p13 from '../assets/projects/13.jpg';
 import p14 from '../assets/projects/14.jpg';
 import heroImg from '../assets/hero.jpg';
 import heroMainImg from '../assets/hero-main.jpg';
+import heroTruckImg from '../assets/hero-truck.png';
 import cardImg from '../assets/card.png';
 import f1t from '../assets/fleet/1t.png';
 import f25t from '../assets/fleet/2_5t.png';
@@ -54,7 +55,8 @@ export const fleet = [
 ];
 
 export const hero = heroImg; // 가로 사진: 업체소개, 링크 미리보기(OG)
-export const heroMain = heroMainImg; // 세로 사진: 홈 첫 화면
+export const heroMain = heroMainImg; // 세로 사진 (현재 미사용)
+export const heroTruck = heroTruckImg; // 홈 첫 화면 버튼 아래 차량 이미지
 
 export const services = [
   {title:'간판 설치·철거',desc:'간판 설치와 철거 등 고소작업 상담'},
