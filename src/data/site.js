@@ -14,6 +14,12 @@ import p13 from '../assets/projects/13.jpg';
 import p14 from '../assets/projects/14.jpg';
 import heroImg from '../assets/hero.jpg';
 import cardImg from '../assets/card.png';
+import f1t from '../assets/fleet/1t.png';
+import f25t from '../assets/fleet/2_5t.png';
+import f35t from '../assets/fleet/3_5t.png';
+import f5t from '../assets/fleet/5t.png';
+import f195t from '../assets/fleet/19_5t.png';
+import fArt from '../assets/fleet/articulated.png';
 
 export const site = {
   name: '남부스카이차',
@@ -35,6 +41,16 @@ export const site = {
 };
 
 export const card = cardImg;
+
+// 작업안내 > 보유 장비
+export const fleet = [
+  {img:f1t, name:'1톤 스카이차', height:'17~20m'},
+  {img:f25t, name:'2.5톤 스카이차', height:'21~24m'},
+  {img:f35t, name:'3.5톤 스카이차', height:'28~32m'},
+  {img:f5t, name:'5톤 스카이차', height:'45m'},
+  {img:f195t, name:'19.5톤 스카이차', height:'75m'},
+  {img:fArt, name:'굴절 스카이차'},
+];
 
 export const hero = heroImg;
 
