@@ -20,6 +20,7 @@ export const site = {
   url: 'https://nambu-sky.pages.dev', // 도메인 구매 시 이 값과 astro.config.mjs의 site를 함께 변경
   phone: '010-5322-3678',
   hours: '06:00 ~ 23:00',
+  owner: '전찬성',
   bizNo: '121-52-60319',
   vehicle: '3.5톤 스카이차',
   maxHeight: '약 30m',
