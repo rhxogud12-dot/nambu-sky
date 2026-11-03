@@ -46,8 +46,11 @@
 @media(max-width:420px){.fleet{gap:10px}.fleet img{padding:6px}.fleet figcaption{flex-direction:column;gap:2px;padding:10px 12px}.fleet figcaption strong{font-size:15px}.fleet figcaption span{font-size:13px}}
 @media(max-width:960px){.cards.three{grid-template-columns:1fr}}
 .schedule{display:grid;grid-template-columns:auto 1fr;gap:8px 10px;margin:0;font-size:15px;line-height:1.6}
-.schedule dt{font-weight:700;color:var(--navy)}.schedule dt::after{content:' :'}
+.schedule dt{font-weight:700;color:var(--navy);white-space:nowrap}.schedule dt::after{content:' :'}
 .schedule dd{margin:0}.schedule dd span{display:block}
+.spec-table .hours{margin:0 0 10px}.spec-table th{vertical-align:top}
+@media(max-width:760px){.spec-table th{width:84px;padding-left:4px;padding-right:4px}.schedule dd span{white-space:nowrap}}
+@media(max-width:420px){.spec-table th,.spec-table td{display:block;width:auto}.spec-table th{padding-bottom:4px;border-bottom:0}.spec-table td{padding-top:4px}}
 .hero .works{display:inline-block;color:#fff;font-size:19px;margin-bottom:6px}
 .banner{background:linear-gradient(120deg,var(--navy),var(--blue-dark));color:#fff;padding:55px 0}.banner h2{margin-top:0}
 .footer{background:var(--navy-2);color:#c4cfdf;padding:35px 0;font-size:14px}.footer p{margin:6px 0}
