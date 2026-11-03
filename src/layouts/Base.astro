@@ -25,7 +25,7 @@ const jsonLd = {
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-    opens: '06:00', closes: '23:00',
+    opens: '00:00', closes: '23:59',
   },
 };
 ---
@@ -41,6 +41,6 @@ const jsonLd = {
 <header class="header"><nav class="container nav"><a href="/" class="brand"><span>남부</span> 스카이차</a><div class="links">{nav.map(([href, label]) => <a href={href} aria-current={path === href ? 'page' : undefined}>{label}</a>)}</div><a class="header-tel" href={`tel:${tel}`}>☎ {site.phone}</a></nav></header>
 <main><slot /></main>
 <section class="banner"><div class="container"><h2>스카이차 작업, 편하게 문의하세요.</h2><p>{site.region} · 작업 가능 여부는 문의 바랍니다.</p><div class="actions"><a class="btn" href={`tel:${tel}`}>☎ {site.phone}</a><a class="btn secondary" href={sms}>문자 문의</a></div></div></section>
-<footer class="footer"><div class="container"><strong>{site.name}</strong><p>{site.vehicle} · 최대 작업 높이 {site.maxHeight} · 바스켓 하중 {site.basketLoad}</p><p>전화 {site.phone} · 작업시간 {site.hours} · 대표 {site.owner} · 사업자등록번호 {site.bizNo}</p><p>{site.region}</p></div></footer>
+<footer class="footer"><div class="container"><strong>{site.name}</strong><p>보유 장비 {site.vehicle}</p><p>전화 {site.phone} · 작업시간 {site.hours} · 대표 {site.owner} · 사업자등록번호 {site.bizNo}</p><p>{site.region}</p></div></footer>
 <div class="callbar"><a class="call" href={`tel:${tel}`}>☎ 전화 문의</a><a class="text" href={sms}>💬 문자 문의</a></div>
 </body></html>
