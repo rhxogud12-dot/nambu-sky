@@ -1,0 +1,6 @@
+---
+import Base from '../../layouts/Base.astro';
+import Gallery from '../../components/Gallery.astro';
+import {projects} from '../../data/site.js';
+---
+<Base title="작업 사례 | 파주·고양·일산 스카이차 남부스카이차" description="남부스카이차의 실제 스카이차 작업 사례. 창고·아파트·주택 외벽, 신축 현장, 현수막 등 3.5톤 스카이차 고소작업 현장 사진."><section class="section"><div class="container"><h1>작업 사례</h1><p class="muted">실제 작업 현장 사진입니다. 사진을 누르면 크게 볼 수 있습니다.</p>{projects.length ? <Gallery items={projects} /> : <div class="placeholder">등록된 작업 사례가 없습니다. 사진과 설명을 준비 중입니다.</div>}</div></section></Base>

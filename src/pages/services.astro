@@ -1,0 +1,5 @@
+---
+import Base from '../layouts/Base.astro';
+import {site, services} from '../data/site.js';
+---
+<Base title="작업 안내 | 남부스카이차 3.5톤 스카이차 고소작업"><section class="section"><div class="container"><h1>작업 안내</h1><p class="muted">현장 여건과 작업 높이 등을 확인하여 가능 여부를 상담합니다. 작업 가능 여부는 문의 바랍니다.</p><div class="cards">{services.map(s=><article class="card"><h3>{s.title}</h3><p class="muted">{s.desc}</p></article>)}</div><h2 style="margin-top:50px">장비 제원</h2><table class="spec-table"><tbody><tr><th>차량</th><td>{site.vehicle}</td></tr><tr><th>최대 작업 높이</th><td>{site.maxHeight} (문의 가능)</td></tr><tr><th>바스켓 하중</th><td>{site.basketLoad}</td></tr><tr><th>영업시간</th><td>{site.hours}</td></tr></tbody></table></div></section></Base>

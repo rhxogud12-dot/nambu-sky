@@ -1,0 +1,43 @@
+---
+import { Image, getImage } from 'astro:assets';
+const {items} = Astro.props;
+const list = await Promise.all(items.map(async p => ({...p, full: (await getImage({src: p.img, width: 1600, format: 'webp'})).src})));
+---
+<div class="gallery">
+  {list.map((p, i) => (
+    <a class="shot" href={p.full} data-i={i} data-title={p.title} data-desc={p.desc}>
+      <Image src={p.img} alt={p.title} width={640} format="webp" quality={75} loading="lazy" />
+      <span class="cap"><strong>{p.title}</strong>{p.region && <em>{p.region}</em>}</span>
+    </a>
+  ))}
+</div>
+<dialog class="lightbox" aria-label="작업 사진 크게 보기">
+  <img alt="" />
+  <p class="lb-cap"></p>
+  <button class="lb-close" aria-label="닫기">✕</button>
+  <button class="lb-prev" aria-label="이전 사진">‹</button>
+  <button class="lb-next" aria-label="다음 사진">›</button>
+</dialog>
+<script>
+  document.querySelectorAll('.gallery').forEach(gallery => {
+    const dlg = gallery.nextElementSibling as HTMLDialogElement;
+    const img = dlg.querySelector('img')!, cap = dlg.querySelector('.lb-cap')!;
+    const shots = [...gallery.querySelectorAll<HTMLAnchorElement>('.shot')];
+    let cur = 0;
+    const show = (i: number) => {
+      cur = (i + shots.length) % shots.length;
+      const s = shots[cur];
+      img.src = s.href; img.alt = s.dataset.title!;
+      cap.textContent = `${s.dataset.title} · ${s.dataset.desc}`;
+    };
+    shots.forEach((s, i) => s.addEventListener('click', e => { e.preventDefault(); show(i); dlg.showModal(); }));
+    dlg.querySelector('.lb-close')!.addEventListener('click', () => dlg.close());
+    dlg.querySelector('.lb-prev')!.addEventListener('click', () => show(cur - 1));
+    dlg.querySelector('.lb-next')!.addEventListener('click', () => show(cur + 1));
+    dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') show(cur - 1); if (e.key === 'ArrowRight') show(cur + 1); });
+    let x0 = 0;
+    dlg.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, {passive: true});
+    dlg.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); });
+  });
+</script>
