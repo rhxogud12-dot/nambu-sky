@@ -36,6 +36,9 @@
 .specs div{background:var(--navy);color:#fff;border-radius:12px;padding:22px}.specs b{display:block;font-size:26px;color:#9db9ff}.specs span{font-size:14px;opacity:.85}
 .spec-table{width:100%;max-width:640px;border-collapse:collapse;margin-top:16px}.spec-table th,.spec-table td{text-align:left;padding:14px 12px;border-bottom:1px solid var(--line)}.spec-table th{width:150px;color:var(--muted);font-weight:600}
 .about-photo{width:100%;max-height:460px;object-fit:cover;border-radius:14px;margin-top:24px}
+.biz-card{width:100%;max-width:460px;height:auto;border-radius:10px;border:1px solid var(--line);box-shadow:0 6px 20px rgba(15,33,71,.12);margin:20px 0 8px;background:#fff}
+.owner{margin-top:40px}
+.hero .works{display:inline-block;color:#fff;font-size:19px;margin-bottom:6px}
 .banner{background:linear-gradient(120deg,var(--navy),var(--blue-dark));color:#fff;padding:55px 0}.banner h2{margin-top:0}
 .footer{background:var(--navy-2);color:#c4cfdf;padding:35px 0;font-size:14px}.footer p{margin:6px 0}
 .placeholder{border:2px dashed #d3dce6;border-radius:14px;padding:38px;text-align:center;color:#718096;margin-top:24px}

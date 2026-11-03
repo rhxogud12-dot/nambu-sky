@@ -13,6 +13,7 @@ import p12 from '../assets/projects/12.jpg';
 import p13 from '../assets/projects/13.jpg';
 import p14 from '../assets/projects/14.jpg';
 import heroImg from '../assets/hero.jpg';
+import cardImg from '../assets/card.png';
 
 export const site = {
   name: '남부스카이차',
@@ -27,8 +28,11 @@ export const site = {
   basketLoad: '400kg',
   areas: ['파주', '고양', '일산'],
   region: '파주 · 고양 · 일산 중심 / 그 외 전 지역 협의',
-  description: '파주·고양·일산 스카이차 남부스카이차. 3.5톤 스카이차, 최대 작업 높이 약 30m, 바스켓 하중 400kg. 간판·외벽·창호·현수막 등 고소작업 전화 상담. 그 외 전 지역 협의.',
+  works: '간판 · 유리 · 외벽공사 일체', // 명함 문구
+  description: '파주·고양·일산 스카이차 남부스카이차. 간판·유리·외벽공사 일체. 3.5톤 스카이차, 최대 작업 높이 약 30m, 바스켓 하중 400kg. 고소작업 전화 상담, 그 외 전 지역 협의.',
 };
+
+export const card = cardImg;
 
 export const hero = heroImg;
 
