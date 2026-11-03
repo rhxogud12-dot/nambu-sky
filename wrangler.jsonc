@@ -1,8 +1,0 @@
-// Cloudflare Workers 정적 배포 설정. 서버 코드 없이 빌드 결과(dist)만 올립니다.
-{
-  "name": "nambu-sky",
-  "compatibility_date": "2026-10-01",
-  "assets": {
-    "directory": "./dist"
-  }
-}

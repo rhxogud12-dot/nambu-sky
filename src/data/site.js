@@ -17,7 +17,7 @@ import heroImg from '../assets/hero.jpg';
 export const site = {
   name: '남부스카이차',
   shortName: '남부',
-  url: 'https://nambu-sky.rhxogud12.workers.dev', // 도메인 구매 시 이 값과 astro.config.mjs의 site를 함께 변경
+  url: 'https://nambu-sky.pages.dev', // 도메인 구매 시 이 값과 astro.config.mjs의 site를 함께 변경
   phone: '010-5322-3678',
   hours: '06:00 ~ 23:00',
   bizNo: '121-52-60319',
