@@ -42,7 +42,7 @@ export const site = {
 
 export const card = cardImg;
 
-// 작업안내 > 보유 장비
+// 보유장비 페이지(/services/)
 export const fleet = [
   {img:f1t, name:'1톤 스카이차', height:'17~20m'},
   {img:f25t, name:'2.5톤 스카이차', height:'21~24m'},

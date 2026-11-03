@@ -11,7 +11,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 const og = await getImage({src: hero, width: 1200, format: 'jpeg'});
 const ogImage = new URL(og.src, Astro.site).href;
 const path = Astro.url.pathname;
-const nav = [['/', '홈'], ['/about/', '업체소개'], ['/services/', '작업안내'], ['/projects/', '작업사례'], ['/contact/', '문의']];
+const nav = [['/', '홈'], ['/about/', '업체소개'], ['/services/', '보유장비'], ['/projects/', '작업사례'], ['/contact/', '문의']];
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
